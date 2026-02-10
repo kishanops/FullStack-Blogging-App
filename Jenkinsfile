@@ -7,22 +7,21 @@ pipeline {
     }
 
     stages {
-        
-        stage('Compile') {
+         stage('Compile') {
             steps {
-            sh  "mvn compile"
+            sh  'mvn compile'
             }
         }
         
         stage('Test') {
             steps {
-                sh "mvn test"
+                sh 'mvn test'
             }
         }
         
         stage('Package') {
             steps {
-                sh "mvn package"
+                sh 'mvn package'
             }
         }
     }
